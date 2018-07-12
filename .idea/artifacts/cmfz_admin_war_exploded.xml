@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="cmfz-rest:war exploded">
-    <output-path>$PROJECT_DIR$/../cmfz/cmfz-rest/target/cmfz-rest</output-path>
+  <artifact type="exploded-war" name="cmfz-admin:war exploded">
+    <output-path>$PROJECT_DIR$/../cmfz/cmfz-admin/target/cmfz-admin</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="cmfz-rest" />
+          <element id="module-output" name="cmfz-admin" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
@@ -49,9 +49,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/../cmfz/cmfz-rest/target/cmfz-rest/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/../cmfz/cmfz-admin/target/cmfz-admin/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="cmfz-rest/web/Web" />
+      <element id="javaee-facet-resources" facet="cmfz-admin/web/Web" />
     </root>
   </artifact>
 </component>

@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cmfz-admin" />
         <module name="cmfz-rest" />
         <module name="cmfza-dmin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cmfz" target="1.5" />
+      <module name="cmfz-admin" target="1.7" />
       <module name="cmfz-rest" target="1.7" />
       <module name="cmfza-dmin" target="1.7" />
     </bytecodeTargetLevel>

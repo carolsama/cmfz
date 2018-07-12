@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/cmfz.iml" filepath="$PROJECT_DIR$/cmfz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cmfz/cmfz.iml" filepath="$PROJECT_DIR$/../cmfz/cmfz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cmfz/cmfz-admin/cmfz-admin.iml" filepath="$PROJECT_DIR$/../cmfz/cmfz-admin/cmfz-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/../cmfz/cmfz-rest/cmfz-rest.iml" filepath="$PROJECT_DIR$/../cmfz/cmfz-rest/cmfz-rest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../cmfz/cmfza-dmin/cmfza-dmin.iml" filepath="$PROJECT_DIR$/../cmfz/cmfza-dmin/cmfza-dmin.iml" />
     </modules>
   </component>
 </project>
