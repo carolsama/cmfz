@@ -71,8 +71,6 @@ public class ArticleController {
     @ResponseBody
     public String addArticle(String article_name, Integer guru_id,String article_text,String article_status){
 
-        System.out.println("zaizhe"+article_text);
-
         Article article = new Article(null,article_name,guru_id,article_text,null,article_status);
 
         if(articleService.addArticle(article)!=0){

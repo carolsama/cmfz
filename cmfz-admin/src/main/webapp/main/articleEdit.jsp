@@ -80,7 +80,7 @@
 
         文章标题:<input id="articleTitle" type="text" name="article_name"><br><br>
         作&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp者:<input id="authorText" name="guru_id"/><br><br>
-        是否展示: <input class="easyui-switchbutton" data-options="onText:'Yes',offText:'No'"><br>
+        是否展示: <input class="easyui-switchbutton" data-options="onText:'Yes',offText:'No'" name="article_status"><br>
         <input id="text1" name="article_text" type="hidden"/>
 
     </div>

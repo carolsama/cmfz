@@ -2,6 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "../mybatis-3-mapper.dtd" >
 <mapper namespace="com.baizhi.cmfz.dao.ManagerDao">
 
+
+    <resultMap id="roleMap" type="SysRole">
+        <id column="role_id" property="roleId"/>
+        <result column="role_name" property="roleName"/>
+        <result column="role_tag" property="roleTag"/>
+
+
+    </resultMap>
+
     <select id="selectManagerByName" resultType="Manager">
         select * from t_manager where mgr_name=#{mgr_name}
     </select>
@@ -11,4 +20,48 @@
         set mgr_pwd=#{mgr_pwd}
         where mgr_name=#{mgr_name}
     </update>
+
+    <!--管理轮播图权限-->
+    <!--根据用户名查询用户拥有那些角色-->
+    <select id="selectRolesByMgrName" resultMap="roleMap">
+        SELECT * FROM sys_role WHERE role_id in
+            (SELECT role_id FROM sys_mgr_role where mgr_id in
+                (SELECT mgr_id FROM t_manager WHERE mgr_name=#{mgrName}))
+    </select>
+    <!--查询用户拥有那些权限-->
+    <select id="selectResourceByUsername" resultType="SysPermission">
+        SELECT
+            resource_id resourceId,
+            resource_name resourceName,
+            resource_tag resourceTag,
+            resource_url resourceUrl,
+            permission_tag permissionTag
+        FROM
+        sys_resource
+        WHERE
+        resource_id IN (
+        SELECT
+        permission_id
+        FROM
+        sys_permission
+        WHERE
+        role_id IN (
+        SELECT
+        role_id
+        FROM
+        sys_mgr_role
+        WHERE
+        mgr_id = (
+        SELECT
+        mgr_id
+        FROM
+        t_manager
+        WHERE
+        mgr_name = #{mgrName}
+        )
+        )
+        )
+    </select>
+
+
 </mapper>

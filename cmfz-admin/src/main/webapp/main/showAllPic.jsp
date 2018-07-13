@@ -1,4 +1,5 @@
 <%@ page  pageEncoding="UTF-8" contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib uri="http://shiro.apache.org/tags" prefix="shiro"%>
 <title>datagride-view</title>
 
 <script type="text/javascript" >
@@ -33,6 +34,7 @@
         });
     });
     /*新增轮播图窗口*/
+    
     function add(){
         $("#dialogAdd").dialog({
             title: '新增轮播图',
@@ -111,9 +113,12 @@
     <table id="all" ></table>
 
     <div id="tools">
+        <shiro:hasPermission name="picture:add">
         <a class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="add()">新增轮播图</a>
+        </shiro:hasPermission>
+        <shiro:hasPermission name="picture:update">
         <a class="easyui-linkbutton" data-options="iconCls:'icon-edit'" onclick="edit()">修改</a>
-
+        </shiro:hasPermission>
     </div>
     <%--弹出对话框窗口--%>
 <div id="dialog"></div>

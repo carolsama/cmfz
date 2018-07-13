@@ -21,27 +21,7 @@ public class StatisticsController {
 
     @RequestMapping("/activeUser")
     @ResponseBody
-//    public List<Statistics> showUsers(){
-//
-//
-//        List<Statistics> list = new ArrayList<Statistics>();
-//
-//        Statistics sevenDay = new Statistics(1,"7天");
-//        Statistics fiftyDay = new Statistics(2,"15天");
-//        Statistics thirtyDay = new Statistics(4,"30天");
-//        Statistics ninetyDay = new Statistics(8,"90天");
-//        Statistics halfYear = new Statistics(9,"半年");
-//        Statistics oneYear = new Statistics(9,"一年");
-//
-//        list.add(sevenDay);
-//        list.add(fiftyDay);
-//        list.add(thirtyDay);
-//        list.add(ninetyDay);
-//        list.add(halfYear);
-//        list.add(oneYear);
-//
-//        return list;
-//    }
+
     public Map<String,Object> showUsers(){
 
         Map<String,Object> map = new HashMap<String,Object>();

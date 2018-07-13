@@ -41,4 +41,7 @@
     <bean id="aspectJAdvice" class="com.baizhi.cmfz.util.AspectJAdvice"></bean>
     <!--使用aspectj风格aop-->
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+    <import resource="applicationContext-shiro.xml"/>
+
 </beans>

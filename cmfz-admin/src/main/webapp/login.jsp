@@ -21,8 +21,6 @@
                 vcode.src = "/cmfz-admin/mgr/getVcode?" + Math.random();
             });
 
-
-			
 			//  form 表单提交
 //			$("#loginForm").bind("submit",function(){
 //				alert("自己做");
@@ -76,7 +74,7 @@
 						</th>
 						<td>
 							<label>
-								<input type="checkbox" id="isRememberUsername" checked="checked" name="cbx"/> 记住用户名
+									<input type="checkbox" id="isRememberUsername" checked="checked" name="rememberMe"/> 七天免登录
 							</label>
 						</td>
 					</tr>
